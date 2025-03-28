@@ -94,9 +94,12 @@ h5, h6          { font-weight: bolder }
     clear: both;  
 }  
  
-.clearfix {  
-    *zoom: 1;  
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
 }
+
 
 
 .logo {
