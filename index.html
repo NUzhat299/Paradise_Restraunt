@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Carl Paradise Restaurant</title>
+
+    <!-- Include Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom Stylesheets -->
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/fancybox.css">
+    <link rel="stylesheet" type="text/css" href="css/animate.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/drawer.css">
+</head>
+<body>
+
+    <!-- Billboard Section -->
+    <section class="billboard light">
+        <header class="wrapper light">
+            <a href="#"><img class="logo" src="./img/logo.png" alt="Restaurant Logo" class="img-fluid" /></a>
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <button class="btn btn-primary d-lg-none" id="sideMenuToggle" onclick="toggleDrawer()">
+                    <i class="bi bi-list"></i> Menu
+                  </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./menu.html">Menu</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./karaoke.html">Karaoke/Party</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./promotions.html">Promotions/Events</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Side Drawer (Hidden by default) -->
+        <div id="sideDrawer" class="side-drawer">
+            <div class="d-flex flex-column align-items-center py-5">
+                <a href="#">Home</a>
+                <a href="./menu.html">Menu</a>
+                <a href="./karaoke.html">Karaoke/Party</a>
+                <a href="./promotions.html">Promotions/Events</a>
+                <a href="./contact.html">Contact Us</a>
+            </div>
+        </div>
+
+        <!-- Overlay -->
+        <div id="sideDrawerOverlay" class="side-drawer-overlay"></div>
+
+        <div class="caption light animated wow fadeInDown clearfix">
+            <h1>Welcome to Paradise Restaurant</h1>
+            <p>A Crazy place for crazy foody - Heart of Perfect Food Hangout!</p>
+            <hr>
+        </div>
+        <div class="shadow"></div>
+    </section><!--  End Billboard  -->
+	 <!-- Services Section -->
+	 <section class="services wrapper">
+        <ul class="clearfix row">
+            <li class="col-12 col-md-4 animated wow fadeInDown">
+                <img class="icon img-fluid" src="img/service.jpg" alt=""/>
+                <span class="separator"></span>
+                <h2>Known for service</h2>
+                <p>We are committed to provide you with an exceptional dining experience every time you walk through our door.</p>
+            </li>
+            <li class="col-12 col-md-4 animated wow fadeInDown" data-wow-delay=".2s">
+                <img class="icon img-fluid" src="img/food.jpg" alt=""/>
+                <span class="separator"></span>
+                <h2>Modern Asian Dining</h2>
+                <p>We offer authentic Chinese and Asian cuisine from the different parts of China and the Far East.</p>
+            </li>
+            <li class="col-12 col-md-4 animated wow fadeInDown" data-wow-delay=".4s">
+                <img class="icon img-fluid" src="img/taste.jpg" alt=""/>
+                <span class="separator"></span>
+                <h2>A harmonious taste</h2>
+                <p>Our chefs understand that the secret of good taste lies largely in the freshness of the ingredients and creating a harmonious combination of tastes.</p>
+            </li>
+        </ul>
+    </section><!--  End Services  -->
+
+    <!-- Video Section -->
+    <section class="video text-center">
+        <img class="logo img-fluid" src="https://th.bing.com/th/id/OIP.9nUBiI0HS6UMNijWRKylTQAAAA?rs=1&pid=ImgDetMain" alt="Restaurant welcomes you" class="video_logo animated wow fadeInDown"/>
+        <h3 class="animated wow fadeInDown">The icing on the cake is our prompt, efficient, and personalized service.</h3>
+        <a href="#" id="play_btn" class="fancybox animated wow flipInX" data-wow-duration="2s"></a>
+    </section><!--  End Video  -->
+
+    <!-- Testimonials Section -->
+    <section class="testimonials wrapper">
+        <div class="title animated wow fadeIn">
+            <h2>We have Karaoke too!</h2>
+            <h3>Apart from the mouth-watering food, we offer private dining rooms with Karaoke facilities in every room with a wide variety of songs. (Rooms can accommodate 10 to 45 people)</h3>
+            <hr class="separator"/>
+        </div>
+    </section><!--  End Testimonials  -->
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="wrapper">
+            <div class="rights">
+                <p>All Rights Reserved - Carl Paradise Restaurant | Developed By Me</p>
+            </div>
+            <nav>
+                <ul class="list-unstyled d-flex justify-content-center">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="./menu.html">Menu</a></li>
+                    <li><a href="./karaoke.html">Karaoke/Party</a></li>
+                    <li><a href="./promotions.html">Promotions/Events</a></li>
+                    <li><a href="./contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>		
+    </footer><!--  End Footer  -->
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Function to toggle the side drawer
+        function toggleDrawer() {
+            const drawer = document.getElementById('sideDrawer');
+            const overlay = document.getElementById('sideDrawerOverlay');
+            drawer.classList.toggle('active');
+            overlay.classList.toggle('active');
+        }
+        
+        // Close the side drawer when overlay is clicked
+        document.getElementById('sideDrawerOverlay').addEventListener('click', function() {
+            const drawer = document.getElementById('sideDrawer');
+            const overlay = document.getElementById('sideDrawerOverlay');
+            drawer.classList.remove('active');
+            overlay.classList.remove('active');
+        });
+    </script>
+
+</body>
+</html>
